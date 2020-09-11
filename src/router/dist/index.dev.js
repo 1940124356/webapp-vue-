@@ -25,10 +25,37 @@ var Home = function Home() {
   });
 };
 
+var Find = function Find() {
+  return Promise.resolve().then(function () {
+    return _interopRequireWildcard(require('@/views/Find.vue'));
+  });
+};
+
+var Cart = function Cart() {
+  return Promise.resolve().then(function () {
+    return _interopRequireWildcard(require('@/views/Cart.vue'));
+  });
+};
+
+var User = function User() {
+  return Promise.resolve().then(function () {
+    return _interopRequireWildcard(require('@/views/User.vue'));
+  });
+};
+
 var router = new _vueRouter["default"]({
   routes: [{
     path: '/home',
     component: Home
+  }, {
+    path: '/find',
+    component: Find
+  }, {
+    path: "/Cart",
+    component: Cart
+  }, {
+    path: '/User',
+    component: User
   }, {
     path: '*',
     redirect: '/home'

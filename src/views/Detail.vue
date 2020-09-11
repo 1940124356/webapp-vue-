@@ -1,29 +1,21 @@
 <!--  -->
 <template>
-<div class='kb-tabbar'>
-    <van-tabbar v-model="active" :route='true'>
-        <van-tabbar-item icon="home-o" to="/home">首页</van-tabbar-item>
-        <van-tabbar-item icon="eye-o" to="/find">发现</van-tabbar-item>
-        <van-tabbar-item icon="cart-o" to="/cart">购物车</van-tabbar-item>
-        <van-tabbar-item icon="user-o" to="/user">我的</van-tabbar-item>
-    </van-tabbar>
-</div>
+  <div class="detail">
+    <h1 v-text="this.$route.params.id"></h1>
+  </div>
 </template>
 
 <script>
 //这里可以导入其他文件（比如：组件，工具js，第三方插件js，json文件，图片文件等等）
 //例如：import 《组件名称》 from '《组件路径》';
-import { Tabbar, TabbarItem } from 'vant';
+
 export default {
 //import引入的组件需要注入到对象中才能使用
-components: {
-    [Tabbar.name]:Tabbar,
-    [TabbarItem.name]:TabbarItem
-},
+components: {},
 data() {
 //这里存放数据
 return {
-    active: 0,
+    
 };
 },
 //监听属性 类似于data概念
@@ -40,7 +32,7 @@ created() {
 },
 //生命周期 - 挂载完成（可以访问DOM元素）
 mounted() {
-
+    
 },
 beforeCreate() {}, //生命周期 - 创建之前
 beforeMount() {}, //生命周期 - 挂载之前
@@ -51,6 +43,5 @@ destroyed() {}, //生命周期 - 销毁完成
 activated() {}, //如果页面有keep-alive缓存功能，这个函数会触发
 }
 </script>
-<style lang="scss" scoped>
-
+<style  scoped>
 </style>
